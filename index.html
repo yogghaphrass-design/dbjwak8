@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>👉🎥😍 CLICK PLAY NOW 💯🔗👈</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      /* Background gradien modern */
+      background: linear-gradient(135deg, #1e1e24, #2b2b36, #16161b);
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Efek Glassmorphism (Kaca) untuk Container */
+    .container {
+      width: 100%;
+      max-width: 380px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 35px 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 25px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Styling Dasar Tombol */
+    .download-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 12px;
+      margin: 12px 0;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      word-wrap: break-word;
+    }
+
+    /* Tombol Utama (Gradien) */
+    .btn-primary {
+      background: linear-gradient(90deg, #ff3b7c, #ff6a3d);
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 59, 124, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 59, 124, 0.5);
+    }
+
+    /* Tombol Alternatif (Transparan Minimalis) */
+    .btn-alt {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-alt:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .download-btn:active {
+      transform: translateY(1px);
+    }
+
+    /* Penyesuaian Script Histats */
+    #histats_counter {
+      margin-top: 25px;
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+    #histats_counter:hover {
+      opacity: 1;
+    }
+
+    /* Khusus layar kecil */
+    @media (max-width: 480px) {
+      .container { padding: 25px 20px; }
+      h1 { font-size: 18px; margin-bottom: 20px; }
+      .download-btn { font-size: 15px; padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎬 Premium Access</h1>
+
+    <a href="https://t.co/gyPpPAMn7L" class="download-btn btn-primary">
+      👉🎥😍 CLICK PLAY NOW 💯🔗👈
+    </a>
+    
+    <a href="https://t.co/gyPpPAMn7L" class="download-btn btn-alt">
+      👉🎥😍 VIDEO ALT 💯🔗👈
+    </a>
+
+    <a href="https://t.co/gyPpPAMn7L" id="btn-watch-4k" class="download-btn btn-alt">
+      👉🎥😍 WATCH 4K 💯🔗👈
+    </a>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Ambil semua parameter di URL saat ini
+      const urlParams = new URLSearchParams(window.location.search);
+      
+      // 2. Cari parameter dengan nama 'v' (contoh: ?v=Eeswb6t11.mp4)
+      const videoParam = urlParams.get('v');
+      
+      // 3. Jika parameter 'v' ditemukan, ubah link pada tombol ke-3
+      if (videoParam) {
+        const watch4kBtn = document.getElementById('btn-watch-4k');
+        // Gabungkan base url CDN dengan ID dari parameter URL
+        watch4kBtn.href = "https://cdn.videy.co/" + videoParam;
+      }
+    });
+  </script>
+
+</body>
+</html>
